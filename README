@@ -1,0 +1,16 @@
+Mailchimp Sync script
+=====================
+Based on http://apidocs.mailchimp.com/api/how-to/ and http://apidocs.mailchimp.com/api/downloads/
+
+This script synchronises your users emails with a Mailchimp account.
+
+INSTALLATION
+============
+1. Clone this project to the root path of your application
+2. Review migration.sql to fit your scenario. Then execute it over a local database with dummy emails.
+3. Review listSync to fit your scenario.
+4. Once you are happy with how it works, set up a crontab with the following line:
+
+0 * * * * /usr/bin/php /path/to/listSync.php >> /path/to/somewhere/to/keep/a/log/mailchimp.log
+
+   The above will run the task every hour and append results to a log file
