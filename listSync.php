@@ -19,7 +19,6 @@ try {
   $current_time = time();
 
   // 1. Connect to database
-  $db = new DATABASE_CONFIG();
   mysql_connect($database['host'], $database['username'], $database['password']);
   $link = mysql_select_db($database['dbname']);
   if (!$link) {
